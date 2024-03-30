@@ -1,0 +1,203 @@
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    cursor: unset;
+  }
+
+  /* Page1 Styling */
+  #page1 h1 {
+    font-size: 1.5rem;
+  }
+
+  #text-box {
+    width: 98%;
+    height: 25%;
+    padding: 1px;
+  }
+  #text-box p {
+    font-size: 1.2em;
+  }
+  #cursor {
+    display: none;
+  }
+
+  /* Navbar styling */
+  nav {
+    width: 80vw;
+    height: 8vh;
+
+  }
+
+  nav ul li {
+    font-size: 0.8em;
+  }
+  #text{
+    padding:1em;
+  }
+  #text h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  #text p{
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .cards{
+    width:100vw;
+    
+  }
+  #page3{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:270vh;
+
+  }
+  #top{
+    height:30vh;
+  }
+  #bottom{
+    height:60vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+  .skillCard{
+    width:3.4rem;
+    height:3.4rem;
+
+  }
+  .skillCard img{
+    width:100%;
+  }
+  #page4Text h1{
+    font-size: 2.5rem;
+  }
+  #page4{
+    /* background:red; */
+    height:80vh;
+  }
+  #page5{
+    height:80vh;
+
+  }
+  #page5 #page5Text{
+    justify-content:flex-start;
+    /* background-color: red; */
+    height:25vh;
+  }
+  #page5 #page5Text h2:first-child{
+    font-size:3.8em;
+    color:#ffffff8e;
+    /* font-weight: 400; */
+    margin:0 auto;
+  
+  }
+  #page5 #page5Text h2:last-child{
+    font-size:3.8em;
+    color:#fff;
+    /* font-weight: 400; */
+  
+  
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  #page1 h1 {
+    font-size: 3rem;
+  }
+  #text-box {
+    /* background-color: red; */
+    width: 80vw;
+    height: 20vh;
+    padding: 1px;
+  }
+
+  #text-box p {
+    font-size: 1.3em;
+  }
+  /* Navbar styling */
+  nav {
+    width: 50vw;
+    height: 8vh;
+    font-size:0.8em;
+
+  }
+  #text h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .cards{
+    width:95vw;
+    
+  }
+  #page3{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:280vh;
+    /* background: #fff; */
+  }
+  #bottom{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .skillCard{
+    width:3.4rem;
+    height:3.4rem;
+  }
+  .skillCard img{
+    width:100%;
+  }
+ #page4Text h1{
+  font-size:4rem;
+ }
+ #page5{
+  height:80vh;
+ }
+ #page5 #page5Text h2:first-child{
+  font-size:3.8em;
+  color:#ffffff8e;
+  /* font-weight: 400; */
+  margin:0 auto;
+
+}
+#page5 #page5Text h2:last-child{
+  font-size:3.8em;
+  color:#fff;
+  /* font-weight: 400; */
+
+
+}
+}
+
+@media only screen and (min-width: 900px) {
+  #page1 h1 {
+    font-size: 5rem;
+  }
+  /* Navbar styling */
+  nav {
+    width: 36vw;
+    height: 8vh;
+  }
+  .cards{
+    width:95vw;
+    
+  }
+  #text h1{
+    font-size: 4rem;
+  }
+  #page3{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top: 270vh;
+  }
+  .skillCard{
+    width:3.8rem;
+    height:3.8rem;
+  }
+  #page4Text h1{
+    font-size:8rem;
+   }
+}
