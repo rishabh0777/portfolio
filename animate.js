@@ -30,7 +30,7 @@ var tl = gsap.timeline({scrollTrigger:{
     // markers:true,
 }});
 tl.to('#text',{
-    top:"-8%",
+    opacity:0,
 },'a')
 // tl.to('#text h1',{
 //     fontSize:'2.2em',
@@ -49,7 +49,7 @@ tl.to('#text p',{
 },'b')
 .to('#pr1',{
     width: '80vw',
-    height: '50vh'
+    height: '70vh'
 },'b')
 .to('#pr3',{
     top: '130%'
@@ -59,14 +59,14 @@ tl.to('#text p',{
 },'c')
 .to('#pr2',{
     width:'85vw',
-    height:'50vh'
+    height:'70vh'
 },'c')
 .to('#pr4',{
     top: '54%',
 },'d')
 .to('#pr3',{
     width:'90vw',
-    height:'50vh'
+    height:'70vh'
 },'d')
 gsap.from('#page3 h1 span',{
     opacity:0,
