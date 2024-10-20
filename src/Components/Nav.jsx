@@ -51,7 +51,7 @@ export default function Nav() {
           transition={{ duration: 0.5 }} // Duration of the animation
         >
           <i 
-            className="ri-close-line xsm:flex md:hidden absolute top-[6vh] font-thin cursor-pointer left-[5vw] xsm:text-[6vw]" 
+            className="ri-close-line xsm:flex md:hidden absolute top-[5.5vh] font-thin cursor-pointer left-[5vw] xsm:text-[5.5vw]" 
             onClick={toggleNavbar} // Close button
           ></i>
           <motion.h2
