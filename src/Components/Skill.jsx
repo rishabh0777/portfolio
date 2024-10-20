@@ -1,16 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import greensock  from "../assets/logo/pngwing.com.png";
+import cssLogo from "../assets/logo/CSS3.png";
+import htmlLogo from "../assets/logo/HTML5.png"
+import tailwind from "../assets/logo/TailwindCSS.png"
+import REACT from "../assets/logo/React.png"
+import javaScript from "../assets/logo/JavaScript.png"
 
 const skills = [
-  { name: "HTML", icon: "ri-html5-fill" },
-  { name: "CSS", icon: "ri-css3-fill" },
-  { name: "JavaScript", icon: "ri-javascript-fill" },
-  { name: "React", icon: "ri-reactjs-fill" },
-  { name: "Tailwind CSS", icon: "ri-tailwindcss-fill" },
-  { name: "Redux", icon: "ri-redux-fill" }, 
-  { name: "GSAP", icon: "ri-gsap-fill" }, 
-  { name: "Firebase", icon: "ri-fire-fill" }, 
+  { name: "HTML", logo:htmlLogo},
+  { name: "CSS", logo:cssLogo},
+  { name: "JavaScript", logo:javaScript},
+  { name: "React", logo:REACT},
+  { name: "Tailwind CSS", logo:tailwind},
+  { name: "GSAP", logo:greensock},
 ];
 
 export default function Skills() {
@@ -62,12 +65,13 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="skill-card flex flex-col items-center p-6"
+              className="skill-card flex flex-col items-center justify-center p-6 gap-4 text-center"
               style={{ minWidth: "150px" }} // Ensure that all cards have a fixed width
-            >
-              <i className={skill.icon + " text-6xl mb-4"}></i>
-              <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">{skill.name}</h2>
-            </div>
+>
+  <img className="w-[5vw] h-auto object-contain" src={skill.logo} alt="not found" />
+  <h2 className="md:text-[0.9vw] xsm:text-[1vw] text-center font-semibold text-gray-800 dark:text-white">{skill.name}</h2>
+</div>
+            
           ))}
         </div>
       </div>
