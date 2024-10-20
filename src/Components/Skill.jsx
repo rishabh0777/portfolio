@@ -68,7 +68,7 @@ export default function Skills() {
               className="skill-card flex flex-col items-center justify-center p-6 gap-4 text-center"
               style={{ minWidth: "150px" }} // Ensure that all cards have a fixed width
 >
-  <img className="w-[5vw] h-auto object-contain" src={skill.logo} alt="not found" />
+  <img className="md:w-[5vw] xsm:w-[8vw] h-auto object-contain" src={skill.logo} alt="not found" />
   <h2 className="md:text-[0.9vw] xsm:text-[1vw] text-center font-semibold text-gray-800 dark:text-white">{skill.name}</h2>
 </div>
             
