@@ -51,7 +51,7 @@ export default function Nav() {
           transition={{ duration: 0.5 }} // Duration of the animation
         >
           <i 
-            className="ri-close-line xsm:flex md:hidden absolute top-[3vh] font-thin cursor-pointer left-[5vw] text-[4vw]" 
+            className="ri-close-line xsm:flex md:hidden absolute top-[6vh] font-thin cursor-pointer left-[5vw] xsm:text-[6vw]" 
             onClick={toggleNavbar} // Close button
           ></i>
           <motion.h2
@@ -95,7 +95,7 @@ export default function Nav() {
       )}
 
       <motion.div
-        className="bg-[#faf0e0] dark:bg-zinc-900 font-novaMono dark:text-white w-full h-[12vh] flex justify-center items-center px-[4vw] overflow-hidden"
+        className="bg-[#faf0e6] dark:bg-zinc-900 font-novaMono dark:text-white w-full h-[12vh] flex justify-center items-center px-[4vw] overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={navAnimation}
