@@ -14,7 +14,7 @@ export default function Nav() {
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, []);
+  }, []); 
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -43,7 +43,7 @@ export default function Nav() {
     <>
       {isOpen && (
         <motion.div
-          className="w-screen h-screen overflow-hidden fixed z-[1000] bg-[#faf0e6] dark:text-white dark:bg-zinc-900 xsm:flex md:hidden flex-col justify-center items-center text-[6vw] gap-8  font-novaMono tracking-extraWide "
+          className="w-screen h-full overflow-hidden fixed z-[1000] bg-[#faf0e6] dark:text-white dark:bg-zinc-900 xsm:flex md:hidden flex-col justify-center items-center text-[6vw] gap-8  font-novaMono tracking-extraWide "
           initial="hidden"
           animate="visible"
           exit="exit" // Use the exit animation
