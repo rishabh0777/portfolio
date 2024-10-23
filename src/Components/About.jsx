@@ -53,7 +53,7 @@ export default function About() {
 		}
 	}
 	return (
-		<div className="bg-[#faf0e6] dark:bg-zinc-900 dark:text-white xsm:h-[100vh] md:min-h-screen flex flex-col items-center py-8">
+		<div id="about" className="bg-[#faf0e6] dark:bg-zinc-900 dark:text-white xsm:h-[100vh] md:min-h-screen flex flex-col items-center py-8">
 			<div ref= {addToRef} className="w-full h-[20vh] flex items-center px-[6vh]">
 			<h3 ref={addToRef} className="md:text-[1.2vw] xsm:text-[5vw] sm:text-[2vw] text-black dark:text-white font-novaMono">Hello There </h3>
 			<div className="w-[3vw] border-black dark:border-white ml-2 border rounded-full"></div>	

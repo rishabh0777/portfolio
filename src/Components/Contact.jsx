@@ -99,7 +99,7 @@ export default function Contact() {
 
 
 	return (
-		<div className="bg-[#faf0e6] dark:bg-zinc-900 dark:text-white w-full h-screen py-2 flex md:flex-row xsm:flex-col px-[4vw]">
+		<div id="about" className="bg-[#faf0e6] dark:bg-zinc-900 dark:text-white w-full h-screen py-2 flex md:flex-row xsm:flex-col px-[4vw]">
 			<div ref={contacttextRef} className="md:w-1/2 xsm:w-full md:h-screen xsm:h-[30vh] py-[8vh]">
 				<h1 className="md:text-[4vw] xsm:text-[6vw] font-spicyRice">Contact Us</h1>
 				<p className="mt-2 text-lg text-gray-600 dark:text-[#ccc] md:text-[1em] xsm:text-[0.9em] font-novaMono">

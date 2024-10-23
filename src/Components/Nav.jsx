@@ -42,6 +42,7 @@ export default function Nav() {
   return (
     <>
       {isOpen && (
+        
         <motion.div
           className="w-screen h-full overflow-hidden fixed z-[1000] bg-[#faf0e6] dark:text-white dark:bg-zinc-900 xsm:flex md:hidden flex-col justify-center items-center text-[6vw] gap-8  font-novaMono tracking-extraWide "
           initial="hidden"
@@ -50,49 +51,63 @@ export default function Nav() {
           variants={navAnimation}
           transition={{ duration: 0.5 }} // Duration of the animation
         >
+        <div className="w-full h-[12vh] absolute top-0 px-12 flex justify-between items-center">
           <i 
-            className="ri-close-line xsm:flex md:hidden absolute top-[5.5vh] font-thin cursor-pointer left-[5vw] xsm:text-[5.5vw]" 
-            onClick={toggleNavbar} // Close button
-          ></i>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Home
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            Work
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            About
-          </motion.h2>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            Contact
-          </motion.h2>
-           <motion.h2
-            className="cursor-pointer md:hidden xsm:flex gap-2 absolute top-[6vh] right-[5vw] text-[3vw]"
+            className="ri-close-line xsm:flex md:hidden font-thin cursor-pointer xsm:text-[5vw]" 
+            initial={{ opacity: 0, x:20 }}
+            animate={{ opacity: 1, x:0 }}
+            transition={{ duration: 0.7, delay: 1.5 }}
+            onClick={toggleNavbar} />
+           
+
+             <motion.p
+            className="cursor-pointer md:hidden xsm:flex gap-2 text-[3vw]"
             onClick={toggleDarkMode}
             initial={{ opacity: 0, y:20 }}
             animate={{ opacity: 1, y:0 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
             {darkMode ? "LightMode" : "DarkMode"} <i className={`${darkMode ? "ri-sun-fill" : "ri-moon-fill"}`}></i>  
+          </motion.p>
+         
+        </div>
+          
+          <motion.h2
+            onClick={toggleNavbar}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <a href="#home">Home</a>
           </motion.h2>
+          <motion.h2
+            onClick={toggleNavbar}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <a href="#work">Work</a>
+          </motion.h2>
+          <motion.h2
+            onClick={toggleNavbar}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <a href="#about">About</a>
+          </motion.h2>
+          <motion.h2
+            onClick={toggleNavbar}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            <a href="#contact">Contact</a>
+          </motion.h2>
+          
         </motion.div>
       )}
+
 
       <motion.div
         className="bg-[#faf0e6] dark:bg-zinc-900 font-novaMono dark:text-white w-full h-[12vh] flex justify-center items-center px-[4vw] overflow-hidden"
@@ -103,43 +118,55 @@ export default function Nav() {
       >
         <nav className="w-full h-full flex justify-between items-center overflow-hidden">
           <motion.h2
-            className="xsm:text-[0.7em] md:text-[0.9em] font-bold"
+            className="xsm:text-[1em] md:text-[0.9em] font-bold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }} // Delay the animation slightly
           >
             Rishabh Srivastava
           </motion.h2>
-          <i className="ri-align-right xsm:text-[3vw] xsm:flex md:hidden md:text-[4vw] cursor-pointer" onClick={toggleNavbar}></i>
+          <i className="ri-align-right xsm:text-[4vw] xsm:flex md:hidden md:text-[4vw] cursor-pointer" onClick={toggleNavbar}></i>
 
           <div className="w-[40vw] h-full md:flex xsm:hidden justify-between items-center">
             <ul className="flex justify-center items-center gap-10 xsm:text-[0.6em] sm:text-[0.7em] md:text-[0.8em] font-bold">
-              {['Home', 'Work'].map((item, index) => (
                 <motion.li
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.2 }} // Adding delay to each item
-                  key={item}
+                  transition={{ duration: 0.8, delay: 0.4 }} // Adding delay to each item
                 >
-                  <a href="#">{item}</a>
+                  <a href="#">Home</a>
                   <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
                 </motion.li>
-              ))}
-            </ul>
-            <ul className="flex justify-center items-center gap-10 xsm:text-[0.6em] sm:text-[0.7em] md:text-[0.8em] font-bold">
-              {['About', 'Contact'].map((item, index) => (
                 <motion.li
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
-                  key={item}
+                  transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                  <a href="#">{item}</a>
-                  <div className="w-[0%] group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
+                  <a href="#work">Work</a>
+                  <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
                 </motion.li>
-              ))}
+            </ul>
+            <ul className="flex justify-center items-center gap-10 xsm:text-[0.6em] sm:text-[0.7em] md:text-[0.8em] font-bold">
+               <motion.li
+                  className="group"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }} 
+                >
+                  <a href="#about">About</a>
+                  <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
+                </motion.li>
+                <motion.li
+                  className="group"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.10 }}
+                >
+                  <a href="#contact">Contact</a>
+                  <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
+                </motion.li>
             </ul>
           </div>
           <motion.h2

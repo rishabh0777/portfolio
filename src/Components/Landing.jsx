@@ -29,7 +29,7 @@ export default function Landing() {
   };
 
   return (
-    <div className="bg-[#faf0e6] dark:bg-zinc-900 relative w-full md:h-[88vh] xsm:h-screen px-[4vw] flex justify-center items-center flex-col">
+    <div id="home" className="bg-[#faf0e6] dark:bg-zinc-900 relative w-full md:h-[88vh] xsm:h-screen px-[4vw] flex justify-center items-center flex-col">
       
       {/* Animate h1 with bounce and scale-in effect */}
       <motion.h1

@@ -61,7 +61,7 @@ mm.add("(min-width: 769px)", () => {
 		
 
 	return (
-		<div className = "bg-[#faf0e6] dark:bg-zinc-900 dark:text-white min-h-screen w-full py-[6vh]">
+		<div id="work" className = "bg-[#faf0e6] dark:bg-zinc-900 dark:text-white min-h-screen w-full py-[6vh]">
 		<div ref={textRef} className="w-full py-[8vh] px-[4vw]">
 			<h1 className="md:text-[4vw] xsm:text-[6vw] margin-bottom-[4vh] font-spicyRice ">My Work</h1>
 			<p className="md:w-[45vw] xsm:w-full font-novaMono">As a passionate Frontend Developer, I collaborate closely with clients to bring their vision to life, ensuring seamless communication and delivering engaging, user-friendly digital experiences that leave a lasting impact.</p>
