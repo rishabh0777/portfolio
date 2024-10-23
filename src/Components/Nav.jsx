@@ -53,7 +53,7 @@ export default function Nav() {
         >
         <div className="w-full h-[12vh] absolute top-0 px-12 flex justify-between items-center">
           <i 
-            className="ri-close-line xsm:flex md:hidden font-thin cursor-pointer xsm:text-[5vw]" 
+            className="ri-close-line xsm:flex md:hidden font-thin cursor-pointer xsm:text-[7vw]" 
             initial={{ opacity: 0, x:20 }}
             animate={{ opacity: 1, x:0 }}
             transition={{ duration: 0.7, delay: 1.5 }}
@@ -61,7 +61,7 @@ export default function Nav() {
            
 
              <motion.p
-            className="cursor-pointer md:hidden xsm:flex gap-2 text-[3vw]"
+            className="cursor-pointer md:hidden xsm:flex gap-2 text-[4vw]"
             onClick={toggleDarkMode}
             initial={{ opacity: 0, y:20 }}
             animate={{ opacity: 1, y:0 }}
