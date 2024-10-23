@@ -133,7 +133,7 @@ export default function Nav() {
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }} // Adding delay to each item
+                  transition={{ duration: 0.5, delay: 0.4 }} // Adding delay to each item
                 >
                   <a href="#">Home</a>
                   <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
@@ -142,7 +142,7 @@ export default function Nav() {
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   <a href="#work">Work</a>
                   <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
@@ -153,7 +153,7 @@ export default function Nav() {
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }} 
+                  transition={{ duration: 0.5, delay: 0.8 }} 
                 >
                   <a href="#about">About</a>
                   <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>
@@ -162,7 +162,7 @@ export default function Nav() {
                   className="group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.10 }}
+                  transition={{ duration: 0.5, delay: 0.10 }}
                 >
                   <a href="#contact">Contact</a>
                   <div className="w-0 group-hover:w-full mt-[0.1em] border-[0.1em] rounded-full border-transparent dark:group-hover:border-white group-hover:border-zinc-800 transition-all duration-300 ease-in-out"></div>

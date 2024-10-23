@@ -4,16 +4,16 @@ const Footer = () => {
   return (
     <footer className="bg-zinc-800 text-white w-full xsm:h-[35vh] md:h-[50vh] flex flex-col items-center py-8 font-novaMono overflow-hidden relative">
           <div className="flex gap-12 w-full justify-center">
-            <a href="#" className="md:text-[2vw] xsm:text-[4vw]">
+            <a href="#" className="md:text-[2vw] xsm:text-[4vw] hover:text-red-500 duration-200">
               <i className="ri-facebook-circle-line"></i>
             </a>
-            <a href="#" className="md:text-[2vw] xsm:text-[4vw]">
+            <a href="#" className="md:text-[2vw] xsm:text-[4vw] hover:text-red-500 duration-200">
               <i className="ri-twitter-line"></i>
             </a>
-            <a href="#" className="md:text-[2vw] xsm:text-[4vw]">
+            <a href="#" className="md:text-[2vw] xsm:text-[4vw] hover:text-red-500 duration-200">
               <i className="ri-instagram-line"></i>
             </a>
-            <a href="#" className="md:text-[2vw] xsm:text-[4vw]">
+            <a href="#" className="md:text-[2vw] xsm:text-[4vw] hover:text-red-500 duration-200">
               <i className="ri-linkedin-box-line"></i>
             </a>
           </div>
