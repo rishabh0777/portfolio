@@ -17,7 +17,7 @@ const Home = () => {
                     <p>
                         I'm a full-stack developer and founder of Webli, passionate about building smooth, fast, and visually engaging websites that solve real problems and elevate brands.
                     </p>
-                    <button className='bg-zinc-900 px-2 w-[12vw] mt-5 text-white rounded-lg'>Visit to Webli</button>
+                    <button className='bg-zinc-900 px-2 w-[12vw] mt-5 text-white rounded-lg py-2'>Visit to Webli</button>
 
                 </div>
                 <div>
