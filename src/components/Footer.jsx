@@ -14,8 +14,7 @@ const Footer = () => {
 
       {/* Center */}
       <div className="flex gap-4">
-        <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Dribbble</a>
-        <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" className="hover:underline">Behance</a>
+        
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
         <a href="mailto:rishabhsrivastava7777@gmail.com" className="hover:underline">Email</a>

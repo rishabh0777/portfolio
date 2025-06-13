@@ -19,7 +19,7 @@ const Services = () => {
     }
   ]
   return (
-    <div className='ralative w-full min-h-[90vh] flex flex-col justify-center items-center px-10'>
+    <div className='services ralative w-full min-h-[90vh] flex flex-col justify-center items-center px-10'>
       <div className='w-[90vw] '>
         <h3>I can help you with...</h3>
       <div className='w-full grid sm:grid-cols-2 md:grid-cols-3 gap-8 py-8'>

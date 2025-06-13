@@ -2,9 +2,9 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className='relative w-full min-h-screen '>
+        <div className='home relative w-full min-h-screen '>
             <div className='w-full flex'>
-                <div className="heading-text-container flex flex-col justify-end w-[77vw] h-[80vh] text-[15vw] pl-10 py-4 leading-[15vw] whitspace-none">
+                <div className="heading-text-container flex flex-col justify-end w-[71vw] h-[80vh] text-[14vw] pl-10 py-4 leading-[14vw] whitspace-none">
                     <h1>Website</h1>
                     <h1>Developer</h1>
                 </div>

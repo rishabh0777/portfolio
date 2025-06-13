@@ -20,7 +20,7 @@ function Work() {
         }
     ]
   return (
-    <div className='w-full min-h-screen px-10 py-4'>
+    <div className='work w-full min-h-screen px-10 py-4'>
         <div className='flex items-center justify-between whitespace-nowrap w-[5vw]'>
             <h3 className='text-[1.2vw] font-bold'>Selected Woks</h3>
             <p className='text-[0.9vw]'>[4]</p>
