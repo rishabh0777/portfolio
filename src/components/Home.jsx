@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Home = () => {
+    
     return (
         <div className='home relative w-full min-h-screen '>
             <div className='w-full flex'>
@@ -17,7 +18,7 @@ const Home = () => {
                     <p>
                         I'm a full-stack developer and founder of Webli, passionate about building smooth, fast, and visually engaging websites that solve real problems and elevate brands.
                     </p>
-                    <button className='bg-zinc-900 px-2 w-[12vw] mt-5 text-white rounded-lg py-2'>Visit to Webli</button>
+                    <button onClick = {()=> window.open('https://webli.vercel.app', '_blank')} className='bg-zinc-900 px-2 w-[12vw] mt-5 text-white rounded-lg py-2'>Visit to Webli</button>
 
                 </div>
                 <div>
