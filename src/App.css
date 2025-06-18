@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+
+
+@theme { 
+   --breakpoint-sm: 340px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+  }
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -7,3 +17,6 @@ body {
 h1, h2, h3, .heading {
   font-family: 'Space Grotesk', sans-serif;
 }
+
+
+

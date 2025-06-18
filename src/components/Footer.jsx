@@ -6,14 +6,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-[#f5f5f5] text-sm text-gray-700 py-6 px-10 flex items-center justify-between shadow-md rounded-t-xl">
+    <footer className="w-full bg-[#f5f5f5] text-sm text-gray-700 py-6 px-10 flex md:flex-row sm:flex-col-reverse items-center justify-between shadow-md rounded-t-xl">
       {/* Left */}
-      <div>
+      <div className="text-center mt-4">
         © {new Date().getFullYear()} All Rights Reserved. Designed & Coded with <span className="text-red-500">❤️</span>
       </div>
 
       {/* Center */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 mt-4">
         
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>

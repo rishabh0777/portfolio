@@ -37,19 +37,19 @@ const Process = () => {
   ];
 
   return (
-    <div className='process w-full min-h-screen flex py-4 px-10 items-center'>
+    <div className='process w-full md:min-h-screen flex md:flex-row sm:flex-col py-4 px-10 md:items-center'>
       {/* Left Side */}
-      <div className='flex flex-col w-1/2 h-[80vh] justify-center'>
-        <h1 className='font-bold text-[5vw] leading-[5vw]'>
+      <div className='flex flex-col md:w-1/2 md:h-[80vh] justify-center'>
+        <h1 className='font-bold md:text-[5vw] md:leading-[5vw] sm:text-[6vw]'>
           My way of getting <br /> things done
         </h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 md:text-lg sm:text-[3.5vw] text-gray-600">
           I follow a clear, step-by-step process — from understanding what you need, to writing clean, scalable code. Whether it's a React frontend or a complete MERN solution, I make sure your website performs smoothly and looks modern. Need deployment? I offer it as a paid add-on.
         </p>
       </div>
 
       {/* Right Side: Accordion */}
-      <div className='flex flex-col w-1/2 h-[80vh] justify-center space-y-2'>
+      <div className='flex flex-col md:w-1/2 md:h-[80vh] justify-center space-y-2 mt-8'>
         {processSteps.map((item, index) => (
           <div
             key={index}
@@ -57,10 +57,10 @@ const Process = () => {
           >
             <div
               onClick={() => toggleAccordion(index)}
-              className="flex justify-between items-center text-[1vw] font-medium text-gray-800"
+              className="flex justify-between items-center md:text-[1vw] sm:text-[3.7vw] font-medium text-gray-800"
             >
               {item.title}
-              <span className='text-[1.2vw]'>{openIndex === index ? '-' : '+'}</span>
+              <span className='md:text-[1.2vw]'>{openIndex === index ? '-' : '+'}</span>
             </div>
 
             <AnimatePresence initial={false}>
@@ -72,7 +72,7 @@ const Process = () => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="mt-2 text-gray-600 text-[0.9vw]">{item.content}</p>
+                  <p className="mt-2 text-gray-600 md:text-[0.9vw]">{item.content}</p>
                 </motion.div>
               )}
             </AnimatePresence>

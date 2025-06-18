@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <main className="relative w-full">
+      <main className="relative w-screen overflow-x-hidden">
         <Navbar />
         <Home />
         <Services />

@@ -21,14 +21,14 @@ const Services = () => {
   return (
     <div className='services ralative w-full min-h-[90vh] flex flex-col justify-center items-center px-10'>
       <div className='w-[90vw] '>
-        <h3>I can help you with...</h3>
-      <div className='w-full grid sm:grid-cols-2 md:grid-cols-3 gap-8 py-8'>
+        <h3 className="sm:text-[7vw] md:text-[4vw]">I can help you with...</h3>
+      <div className='w-full grid sm:grid-cols-1 md:grid-cols-3 gap-8 py-8 sm:justify-items-center md:justify-items-start sm:items-center md:items-start'>
         {
           services.map((service) => (
-            <div className='w-[20vw] h-[20vh] flex flex-col'>
-        <h1 className="text-[5vw] text-zinc-500">{service.index}</h1>
-        <h1 className='text-[1.5vw] font-bold'>{service.title}</h1>
-        <p className='text-[0.8vw]'>
+            <div className='md:w-[20vw] md:h-[20vh] sm:w-[80vw] sm:h-[30vh] flex flex-col'>
+        <h1 className="md:text-[5vw] sm:text-[18vw] text-zinc-500">{service.index}</h1>
+        <h1 className='md:text-[1.5vw] sm:text-[5vw] font-bold'>{service.title}</h1>
+        <p className='md:text-[0.8vw] sm:text-[3vw]'>
           {service.description}
         </p>
         </div>

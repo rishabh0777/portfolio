@@ -3,10 +3,10 @@ import Rishabh from '../assets/rishabh.jpeg'
 
 const Contact = () => {
   return (
-    <div className=' w-full min-h-screen flex items-center justify-center py-4 px-10'>
-      <div className='w-[95vw] contact'>
-        <h1 className='text-[6vw] font-bold leading-[6vw]'>
-          <div className='bg-red-500 w-[5vw] h-[5vw] inline-block mr-2 rounded-full overflow-hidden'>
+    <div className=' w-full md:min-h-screen sm:min-h-[40vh] flex items-center justify-center py-4 px-10'>
+      <div className='md:w-[95vw] sm:w-[98vw] contact'>
+        <h1 className='md:text-[6vw] font-bold md:leading-[6vw] sm:text-[6.5vw] sm:leading-[6.5vw]'>
+          <div className='md:w-[5vw] md:h-[5vw] sm:w-[7vw] sm:h-[7vw] inline-block mr-2 rounded-full overflow-hidden'>
             <img src={Rishabh} alt="" />
           </div>
 

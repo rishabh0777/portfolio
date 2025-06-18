@@ -52,14 +52,14 @@ const Navbar = () => {
   return (
     <>
       <nav className='w-full h-[8vh] bg-white-100 fixed top-0 left-0 z-[200] px-4 flex items-center justify-between'>
-        <h1 className="text-[1.2vw] font-bold">Rishabh Srivastava</h1>
+        <h1 className="md:text-[1.2vw] sm:text-[3.5vw]">Rishabh Srivastava</h1>
         <h3 
         onClick={!isOpen ? toggleMenu : closeMenu}
-        className="text-[1.2vw] font-bold tracking-[0.1em] cursor-pointer">{isOpen ? "Close":"Menu"}</h3>
+        className="md:text-[1.2vw] sm:text-[3.5vw] tracking-[0.1em] cursor-pointer">{isOpen ? "Close":"Menu"}</h3>
 
       </nav>
       <div ref = {overlayRef} className="fixed right-0 h-screen w-screen bg-white z-[199]">
-        <ul className='flex flex-col items-center justify-center h-full gap-5 text-[3.5vw]'>
+        <ul className='flex flex-col items-center justify-center h-full gap-5 sm:text-[7vw] md:text-[3.5vw]'>
           <div className="overflow-hidden relative py-2 flex flex-col justify-between">
           <h1 className="cursor-pointer" onClick={() => scrollToSection('.home')}>About</h1>
           <div className="absolute w-full bg-zinc-900 h-[0.2vh] bottom-2 left-[-100%]"></div>
