@@ -37,7 +37,7 @@ const Process = () => {
   ];
 
   return (
-    <div className='process w-full md:min-h-screen flex md:flex-row sm:flex-col py-4 px-10 md:items-center'>
+    <div className='process relative w-full md:min-h-screen flex md:flex-row sm:flex-col py-4 px-10 md:items-center'>
       {/* Left Side */}
       <div className='flex flex-col md:w-1/2 md:h-[80vh] justify-center'>
         <h1 className='font-bold md:text-[5vw] md:leading-[5vw] sm:text-[6vw]'>
