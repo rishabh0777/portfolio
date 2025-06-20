@@ -6,7 +6,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-[#f5f5f5] text-sm text-gray-700 py-6 px-10 flex md:flex-row sm:flex-col-reverse items-center justify-between shadow-md rounded-t-xl">
+    <footer className="w-full py-6 px-2 border-t-2 flex md:flex-row sm:flex-col-reverse items-center justify-between shadow-md rounded-t-xl">
       {/* Left */}
       <div className="text-center mt-4">
         © {new Date().getFullYear()} All Rights Reserved. Designed & Coded with <span className="text-red-500">❤️</span>

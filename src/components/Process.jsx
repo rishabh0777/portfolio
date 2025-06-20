@@ -43,7 +43,7 @@ const Process = () => {
         <h1 className='font-bold md:text-[5vw] md:leading-[5vw] sm:text-[6vw]'>
           My way of getting <br /> things done
         </h1>
-        <p className="mt-4 md:text-lg sm:text-[3.5vw] text-gray-600">
+        <p className="mt-4 md:text-lg sm:text-[3.5vw]">
           I follow a clear, step-by-step process — from understanding what you need, to writing clean, scalable code. Whether it's a React frontend or a complete MERN solution, I make sure your website performs smoothly and looks modern. Need deployment? I offer it as a paid add-on.
         </p>
       </div>
@@ -53,11 +53,11 @@ const Process = () => {
         {processSteps.map((item, index) => (
           <div
             key={index}
-            className="border-b border-gray-300 rounded-xl p-4 cursor-pointer"
+            className="border-b border-gray-300 p-4 cursor-pointer"
           >
             <div
               onClick={() => toggleAccordion(index)}
-              className="flex justify-between items-center md:text-[1vw] sm:text-[3.7vw] font-medium text-gray-800"
+              className="flex justify-between items-center md:text-[1vw] sm:text-[3.7vw] font-medium"
             >
               {item.title}
               <span className='md:text-[1.2vw]'>{openIndex === index ? '-' : '+'}</span>
