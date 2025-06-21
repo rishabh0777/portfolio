@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <main className="relative w-screen overflow-x-hidden bg-[#111] text-white">
+      <main className="relative w-screen overflow-x-hidden bg-[#010101] text-[#ffffff]">
         <Navbar />
         <Home />
         <Services />

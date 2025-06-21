@@ -13,28 +13,34 @@ function Work() {
         {
             title: 'Webli',
             description: 'A Creative Agency',
+            link: 'https://webli.vercel.app/'
         },
         {
             title: 'Atmos',
-            description: 'A Weather Website'
+            description: 'A Weather Website',
+            link: 'https://rishabh0777.github.io/Atmos/'
         },
         {
             title: 'Spicesaga',
-            description: 'A Food Selling site'
+            description: 'A Food Selling site',
+            link: 'https://rishabh0777.github.io/spice_saga/'
         },
         {
             title: 'Timeless Vogue',
-            description: 'An E-commerce Website for Men\'s Fashion'
+            description: "An E-commerce Website for Men's Fashion",
+            link: 'https://rishabh0777.github.io/timelessvogue/'
         }
     ];
 
     useGSAP(() => {
+        // Animate heading
         gsap.fromTo(workHeadRef.current, {
             opacity: 0,
-
+            y: 30,
         }, {
             opacity: 1,
-            duration: 1,
+            y: 0,
+            duration: 1.2,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: workHeadRef.current,
@@ -44,50 +50,65 @@ function Work() {
             }
         });
 
+        // Animate each work card
         worksRef.current.forEach((work, index) => {
             if (!work) return;
             gsap.fromTo(work, {
                 opacity: 0,
-                y: 50
+                y: 60
             }, {
                 opacity: 1,
                 y: 0,
-                duration: 1,
-                ease: 'lenient',
+                duration: 1.3,
+                ease: 'linear',
                 scrollTrigger: {
                     trigger: work,
                     start: 'top 90%',
                     end: 'top 80%',
                     toggleActions: 'play none none reverse',
-                    // markers: true
                 }
             });
         });
     }, []);
 
     return (
-        <div className='work relative w-full min-h-[60vh] px-10 py-4'>
+        <div className='work relative w-full min-h-[60vh] px-6 py-4'>
             <div ref={workHeadRef} className='flex items-center justify-between whitespace-nowrap w-[5vw]'>
-                <h1 className='md:text-[2vw] sm:text-[6vw] font-bold'>Selected Woks</h1>
-                <p className='md:text-[0.9vw] sm:text-[4vw] text-pink-300'>[4]</p>
+                <h1 className='md:text-[2vw] sm:text-[6vw] font-bold'>Selected Works</h1>
+                <p className='md:text-[0.9vw] sm:text-[4vw] text-pink-300'>[{works.length}]</p>
             </div>
-            <div className='md:w-[95vw mx-auto mt-8 border-t-[0.1vh] border-zinc-400'>
+
+            <div className='md:w-[95vw] mx-auto mt-5 flex flex-col md:gap-5 sm:gap-8'>
                 {
-                    works.map((work, index) => (
-                        <div
-                            key={index}
-                            ref={(el) => worksRef.current[index] = el}
-                            className='flex items-center justify-between w-full py-4 px-4 border-b-[0.1vh] border-zinc-400 hover:bg-[#caf291] hover:text-black cursor-pointer transition-all duration-300'
-                        >
-                            <div className='flex flex-col'>
-                                <h2 className='md:text-[4vw] sm:text-[6vw] font-bold'>{work.title}</h2>
-                                <p className='md:text-[1.2vw] sm:text-[2.5vw]'>{work.description}</p>
+                    works.map((work, index) => {
+                        const content = (
+                            <div
+                                ref={(el) => worksRef.current[index] = el}
+                                className='flex items-center justify-between w-full py-3 px-4 hover:bg-[#caf291] hover:text-black cursor-pointer transition-all duration-300'
+                            >
+                                <div className='flex flex-col'>
+                                    <h2 className='md:text-[3vw] sm:text-[6vw] font-bold'>{work.title}</h2>
+                                    <p className='md:text-[1.2vw] sm:text-[2.5vw]'>{work.description}</p>
+                                </div>
+                                <div>
+                                    <i className="ri-arrow-right-up-line md:text-[4vw] sm:text-[7vw]"></i>
+                                </div>
                             </div>
-                            <div>
-                                <i className="ri-arrow-right-up-line md:text-[4vw] sm:text-[7vw]"></i>
-                            </div>
-                        </div>
-                    ))
+                        );
+
+                        return work.link ? (
+                            <a
+                                key={index}
+                                href={work.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {content}
+                            </a>
+                        ) : (
+                            <div key={index}>{content}</div>
+                        );
+                    })
                 }
             </div>
         </div>

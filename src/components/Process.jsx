@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Process = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const paraRef = useRef(null);
+  const sectionRef = useRef(null);
+  const accordionRefs = useRef([]);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -36,15 +44,89 @@ const Process = () => {
     },
   ];
 
+  const paragraph = `I follow a clear, step-by-step process — from understanding what you need, to writing clean, scalable code. Whether it's a React frontend or a complete MERN solution, I make sure your website performs smoothly and looks modern. Need deployment? I offer it as a paid add-on.`;
+
+  const words = paragraph.split(' ');
+
+  // Animate full section on scroll
+  useGSAP(() => {
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }, []);
+
+  // Animate paragraph word by word
+  useGSAP(() => {
+    const wordSpans = paraRef.current.querySelectorAll('span');
+    gsap.set(wordSpans, { opacity: 0, color: '#888' });
+
+    gsap.to(wordSpans, {
+      opacity: 1,
+      color: '#fff', 
+      duration: 0.5,
+      stagger: 0.07,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: paraRef.current,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+  }, []);
+
+  // Animate accordion entry one by one
+  useEffect(() => {
+    accordionRefs.current.forEach((el, i) => {
+      if (!el) return;
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-    <div className='process relative w-full md:min-h-screen flex md:flex-row sm:flex-col py-4 px-10 md:items-center'>
+    <div
+      ref={sectionRef}
+      className='process relative w-full md:min-h-screen flex md:flex-row sm:flex-col py-4 px-10 md:items-center'
+    >
       {/* Left Side */}
       <div className='flex flex-col md:w-1/2 md:h-[80vh] justify-center'>
         <h1 className='font-bold md:text-[5vw] md:leading-[5vw] sm:text-[6vw]'>
           My way of getting <br /> things done
         </h1>
-        <p className="mt-4 md:text-lg sm:text-[3.5vw]">
-          I follow a clear, step-by-step process — from understanding what you need, to writing clean, scalable code. Whether it's a React frontend or a complete MERN solution, I make sure your website performs smoothly and looks modern. Need deployment? I offer it as a paid add-on.
+        <p
+          ref={paraRef}
+          className="mt-4 md:text-lg sm:text-[3.5vw] leading-relaxed flex flex-wrap"
+        >
+          {words.map((word, i) => (
+            <span key={i} className="mr-1 inline-block">
+              {word}
+            </span>
+          ))}
         </p>
       </div>
 
@@ -53,6 +135,7 @@ const Process = () => {
         {processSteps.map((item, index) => (
           <div
             key={index}
+            ref={(el) => (accordionRefs.current[index] = el)}
             className="border-b border-gray-300 p-4 cursor-pointer"
           >
             <div
@@ -72,7 +155,7 @@ const Process = () => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="mt-2 text-gray-600 md:text-[0.9vw]">{item.content}</p>
+                  <p className="mt-2 text-gray-400 md:text-[0.9vw]">{item.content}</p>
                 </motion.div>
               )}
             </AnimatePresence>
