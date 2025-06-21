@@ -88,7 +88,7 @@ const Navbar = () => {
         <button
           ref={btnRef}
           onClick={() => window.open('https://webli.vercel.app', '_blank')}
-          className="bg-[#caf291] px-4 py-2 rounded-full text-black hidden md:flex"
+          className="bg-[#caf291] px-4 py-2 rounded-full cursor-pointer text-black hidden md:flex"
         >
           VISIT TO WEBLI
         </button>
