@@ -15,8 +15,8 @@ const Footer = () => {
       {/* Center */}
       <div className="flex gap-4 mt-4">
         
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+        <a href="https://www.linkedin.com/in/rishabh-srivastava-1b17461b0?utm_source=share&utm_compaign=share_via&utm_content=profile&utm_medium=auto" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+        <a href="https://www.instagram.com/_rishabhsrivastava07?igsh=bWj2ZmFmZnFxeTZh" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
         <a href="mailto:rishabhsrivastava7777@gmail.com" className="hover:underline">Email</a>
       </div>
 

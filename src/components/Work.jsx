@@ -28,7 +28,7 @@ function Work() {
         {
             title: 'Timeless Vogue',
             description: "An E-commerce Website for Men's Fashion",
-            link: 'https://rishabh0777.github.io/timelessvogue/'
+            link: 'https://timelessvogue.vercel.app'
         }
     ];
 
