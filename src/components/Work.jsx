@@ -16,11 +16,6 @@ function Work() {
             link: 'https://webli.vercel.app/'
         },
         {
-            title: 'Atmos',
-            description: 'A Weather Website',
-            link: 'https://rishabh0777.github.io/Atmos/'
-        },
-        {
             title: 'Spicesaga',
             description: 'A Food Selling site',
             link: 'https://rishabh0777.github.io/spice_saga/'
