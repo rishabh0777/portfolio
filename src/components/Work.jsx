@@ -16,14 +16,19 @@ function Work() {
             link: 'https://webli.vercel.app/'
         },
         {
+            title: "Lion's Den Cafe",
+            description: "A Cafe in Jaunpur",
+            link: "https://lionsdencafe.vercel.app/"
+        },
+        {
             title: 'Spicesaga',
-            description: 'A Food Selling site',
-            link: 'https://rishabh0777.github.io/spice_saga/'
+            description: 'A Food Restaurant Site',
+            link: 'https://spicesaga.vercel.app/'
         },
         {
             title: 'Timeless Vogue',
             description: "An E-commerce Website for Men's Fashion",
-            link: 'https://timelessvogue.vercel.app'
+            link: 'https://timelessvogue.vercel.app/'
         }
     ];
 
@@ -41,6 +46,7 @@ function Work() {
                 trigger: workHeadRef.current,
                 start: 'top 80%',
                 end: 'top 60%',
+                scrub: true,
                 toggleActions: 'play none none reverse'
             }
         });
@@ -54,12 +60,12 @@ function Work() {
             }, {
                 opacity: 1,
                 y: 0,
-                duration: 1.3,
                 ease: 'linear',
                 scrollTrigger: {
                     trigger: work,
                     start: 'top 90%',
                     end: 'top 80%',
+                    scrub: true,
                     toggleActions: 'play none none reverse',
                 }
             });
