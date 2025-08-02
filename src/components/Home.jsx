@@ -1,8 +1,11 @@
 import React, {useRef, useState} from 'react'
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
+import LionsdenImage from '../assets/images/lionsdenproject.png'
+import SpiceSagaImage from '../assets/images/spicesagaproject.png'
 
 const Home = () => {
+
   const imgRef1 = useRef(null);
   const imgRef2 = useRef(null);
   const imgRef3 = useRef(null);
@@ -176,11 +179,11 @@ gsap.to(imgRef6.current, {
       <h1 ref={heroTextRef} className="text-center md:text-[5vw] md:leading-[5vw] text-[10vw]  font-bold">EXCEPTIONAL<br /><span className="text-pink-300">DIGITAL </span><br />EXPERIANCES</h1>
       <p ref={heroParaTextRef} className="md:w-[40%] w-[65%] text-center mt-[2vh] text-[2.8vw] md:text-[1.2vw]">I'm Rishabh Srivastava — Full-Stack Developer & Founder of <span className='text-pink-300'>Webli</span>, crafting modern, high-performing websites with animations and scalable solutions.
 </p>
-      <div ref={imgRef1} className="md:w-[10vw] md:h-[15vh] w-[30vw] bg-red-400 absolute left-[10vw] md:top-[10vh] top-[15vh]">
-        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1710447503692-8364152e431c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdyaXRpbmclMjBzb210aGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
+      <div ref={imgRef1} className="md:w-[10vw] md:h-[15vh] w-[35vw] bg-red-400 absolute left-[10vw] md:top-[10vh] top-[15vh]">
+        <img className="w-full h-full object-cover" src={LionsdenImage} alt="" />
       </div>
       <div ref={imgRef2} className="md:w-[10vw] md:h-[15vh] w-[2vw] sm:h-[15vh] bg-red-400 absolute left-[5vw] hidden md:flex">
-        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1699046795037-e736ec97cc2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYnNpdGUlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D" alt="" />
+        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGN8ZW58MHx8MHx8fDA%3D" alt="" />
       </div>
       <div ref={imgRef3} className="md:w-[10vw] md:h-[15vh] w-[30vw] sm:h-[15vh] bg-red-400 absolute left-[10vw] md:bottom-[10vh] bottom-[15vh]">
         <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBsYW5uaW5nfGVufDB8fDB8fHww" alt="" />
@@ -189,7 +192,7 @@ gsap.to(imgRef6.current, {
         <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1531421331102-e5124fed6bc0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRhYnxlbnwwfHwwfHx8MA%3D%3D" alt="" />
       </div>
       <div ref={imgRef5} className="md:w-[10vw] md:h-[15vh] w-[30vw] sm:h-[15vh] bg-red-400 absolute right-[5vw] hidden md:flex">
-        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGN8ZW58MHx8MHx8fDA%3D" alt="" />
+        <img className="w-full h-full object-cover" src={SpiceSagaImage} alt="spice saga" />
       </div>
       <div ref={imgRef6} className="md:w-[10vw] md:h-[15vh] w-[30vw] sm:h-[15vh] bg-red-400 absolute right-[10vw] md:bottom-[10vh] bottom-[15vh] ">
         <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bW9iaWxlfGVufDB8fDB8fHww" alt="" />
