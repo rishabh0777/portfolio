@@ -11,7 +11,7 @@ function Work() {
 
     const works = [
         {
-            title: 'Webli',
+            title: 'Webli Studio',
             description: 'A Creative Agency',
             link: 'https://webli.vercel.app/'
         },
@@ -21,9 +21,19 @@ function Work() {
             link: "https://lionsdencafe.vercel.app/"
         },
         {
-            title: 'Spicesaga',
-            description: 'A Food Restaurant Site',
-            link: 'https://spicesaga.vercel.app/'
+            title: 'Aathavan Films',
+            description: 'A Photography or Videography Portfolio',
+            link: 'https://aathavanfilms.vercel.app/'
+        },
+        {
+            title: 'Serene Stays Goa',
+            description: 'A Holiday Home Rental Website',
+            link: 'https://serene-stays.vercel.app/'
+        },
+        {
+            title: 'Jerdon Villa',
+            description: 'A Luxirios Pool Villa',
+            link: 'https://www.jerdon.in/'
         },
         {
             title: 'Timeless Vogue',
